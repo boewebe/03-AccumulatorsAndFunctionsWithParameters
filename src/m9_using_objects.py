@@ -14,7 +14,8 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    two_circles()
+    circle_and_rectangle()
 
 def two_circles():
     """
@@ -26,21 +27,22 @@ def two_circles():
            -- One is filled with some color and one is not filled.
     -- Waits for the user to press the mouse, then closes the window.
     """
-    window = rg.RoseWindow
-    window.render()
-
-
-
-    window.close_on_mouse_click()
-
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its green doc-string above.
+    # DONE: 2. Implement this function, per its green doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.pdf  lists all legal color-names.
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # -------------------------------------------------------------------------
+    window = rg.RoseWindow(500, 500)
+    circle_1 = rg.Circle(rg.Point(150,150), 20)
+    circle_1.fill_color = 'red'
+    circle_2 = rg.Circle(rg.Point(350, 350), 30)
+    circle_1.attach_to(window)
+    circle_2.attach_to(window)
+    window.render()
 
+    window.close_on_mouse_click()
 
 def circle_and_rectangle():
     """
@@ -83,6 +85,27 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
 
+    window = rg.RoseWindow(500, 500)
+
+    rect = rg.Rectangle(rg.Point(130, 400), rg.Point(240, 100))
+    rect.attach_to(window)
+    circle = rg.Circle(rg.Point(400, 200), 50)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+
+    thick = circle.outline_thickness
+    print(thick)
+    color = circle.fill_color
+    print(color)
+    center = circle.center
+    print(center)
+    x_point = circle.center.x
+    print(x_point)
+    y_point = circle.center.y
+
+
+    window.render()
+    window.close_on_mouse_click()
 
 def lines():
     """

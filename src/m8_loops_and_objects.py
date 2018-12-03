@@ -14,13 +14,14 @@ import math
 
 
 def main():
-    print_sequence1()
-    draw_circles1()
-    print_sequence2()
-    draw_circles2()
-    print_sequence3()
-    print_cosines()
-    draw_cosines_and_sines()
+    #print_sequence1()
+    #draw_circles1()
+    #print_sequence2()
+    #draw_circles2()
+    #print_sequence3()
+    draw_circles3()
+    #print_cosines()
+    #draw_cosines_and_sines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -180,9 +181,10 @@ def draw_circles3():
     """
     window = rg.RoseWindow(300, 300)
     total = 0
-    for k in range(100):
+    for k in range(99):
         total = total + 1
         circle = rg.Circle(rg.Point(200, 150), total)
+        circle.attach_to(window)
     window.render()
     window.close_on_mouse_click()
 
