@@ -96,13 +96,13 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected = 0.13416
+    expected = 5.86370
     answer = sum_square_roots(4)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 0.421623
+    expected = 27.30280
     answer = sum_square_roots(10)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
@@ -114,7 +114,7 @@ def run_test_sum_square_roots():
     print('       actual:  ', answer)
 
     # Test 4:
-    expected = -0.235818
+    expected = 11.85440
     answer = sum_square_roots(6)
     print('Test 4 expected:', expected)
     print('       actual:  ', answer)
@@ -140,7 +140,7 @@ def sum_square_roots(n):
     return total
 
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
