@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -76,7 +77,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -103,6 +104,16 @@ def circle_and_rectangle():
     print(x_point)
     y_point = circle.center.y
 
+    thick_1 = rect.outline_thickness
+    print(thick_1)
+    color_1 = rect.fill_color
+    print(color_1)
+    center_1 = rect.get_center()
+    print(center_1)
+    x_point_1 = rect.get_center().x
+    print(x_point_1)
+    y_point_1 = rect.get_center().y
+    print(y_point_1)
 
     window.render()
     window.close_on_mouse_click()
@@ -130,6 +141,28 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # TODO: 4. Implement and test this function.
+
+    window = rg.RoseWindow(500, 500)
+
+    line_1 = rg.Line(rg.Point(100, 100), rg.Point(400, 400))
+    line_1.attach_to(window)
+
+    line_2 = rg.Line(rg.Point(400, 100), rg.Point(100, 400))
+    line_2.thickness = 5
+    line_2.attach_to(window)
+
+    print()
+    print("lines()-----Test")
+    print()
+    midpoint = line_2.get_midpoint()
+    print(midpoint)
+    midpoint_x = line_2.get_midpoint().x
+    print(midpoint_x)
+    midpoint_y = line_2.get_midpoint().y
+    print(midpoint_y)
+
+    window.render()
+    window.close_on_mouse_click()
 
 
 # -----------------------------------------------------------------------------
